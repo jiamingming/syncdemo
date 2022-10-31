@@ -23,5 +23,15 @@ jobs:
 
     - name: Build
       run: go build -o syncdemo main.go
+      
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with: # 将下述可执行文件 release 上去
+        draft: false # Release草稿
+        files: |
+          syncdemo
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
