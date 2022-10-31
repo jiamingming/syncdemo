@@ -29,7 +29,6 @@ jobs:
       with: 
         files: |
           syncdemo
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   
 
 
