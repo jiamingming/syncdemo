@@ -6,8 +6,7 @@ name: Go
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+ 
 
 jobs:
 
@@ -27,8 +26,8 @@ jobs:
 
     - name: Release
       uses: softprops/action-gh-release@v1
-      with: # 将下述可执行文件 release 上去
-        draft: false # Release草稿
+      with: 
+        draft: false 
         files: |
           syncdemo
       env:
