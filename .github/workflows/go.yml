@@ -6,6 +6,8 @@ name: Go
 on:
   push:
     branches: [ "master" ]
+    tags:
+      - "v*"
  
 
 jobs:
@@ -27,10 +29,8 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with: 
-        draft: false 
         files: |
           syncdemo
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   
 
 
