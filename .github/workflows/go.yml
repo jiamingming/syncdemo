@@ -20,12 +20,13 @@ jobs:
       with:
         go-version: 1.18
 
-    - name: Build
-      run: go build -o syncdemo main.go
-      
+
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Build
+      run: go build -o syncdemo main.go
+      
     - name: Release
       uses: softprops/action-gh-release@v1
       with: 
